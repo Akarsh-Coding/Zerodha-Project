@@ -130,3 +130,7 @@ h1 {
 a {
   text-decoration: none;
 }
+
+.parent a {
+  color: inherit !important;
+}
