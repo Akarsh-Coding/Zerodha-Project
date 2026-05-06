@@ -7,7 +7,7 @@ function Footer() {
             <div className="row mt-5">
                 <div className="col">
                     <img src="/images/logo.svg" alt="Logo" style={{width:"65%"}}/>
-                    <p style={{fontSize:"13.5px"}} className='text-muted'> &copy; 2010 - 2024, Not Zerodha Broking Ltd. <br /> All rights reserved.</p>
+                    <p style={{fontSize:"13px"}} className='text-muted mt-3'> &copy; 2010 - 2024, Not Zerodha Broking Ltd. <br /> All rights reserved.</p>
                     <div className='text-muted fs-5 d-flex gap-2 ms-3'>
                         <i class="fa-brands fa-twitter"></i>
                         <i class="fa-brands fa-square-facebook"></i>
@@ -48,7 +48,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='mt-5 text-muted' style={{fontSize:"12.5px"}}>
+            <div className='mt-5 text-muted' style={{fontSize:"11px"}}>
                 <p>Zerodha Broking Ltd.: Member of NSE, BSE, MCX & MSEI – SEBI Registration no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Registered Address: Zerodha Broking Ltd., #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any complaints pertaining to securities broking please write to complaints@zerodha.com, for DP related to dp@zerodha.com. Please ensure you carefully read the Risk Disclosure Document as prescribed by SEBI | ICF</p>
                 <p>Procedure to file a complaint on SEBI SCORES: Register on SCORES portal. Mandatory details for filing complaints on SCORES: Name, PAN, Address, Mobile Number, E-mail ID. Benefits: Effective Communication, Speedy redressal of the grievances</p>
                 <p>Smart Online Dispute Resolution | Grievances Redressal Mechanism</p>
