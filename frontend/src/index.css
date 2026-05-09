@@ -122,8 +122,60 @@ h1 {
 
 a {
   text-decoration: none;
+  color: #387ed1;
 }
 
 .parent a {
   color: inherit !important;
+}
+
+
+.nav-tabs{
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.tab {
+  padding: 6px 15px;
+  margin-right: 3px;
+}
+
+.sel {
+  color: #666;
+}
+
+.nav-tabs .tab.active {
+  color: #666;
+  border: none;
+  border-bottom: 2px solid #387ed1;
+  background-color: transparent;
+}
+
+.free-tag {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    color: #fff;
+    background: #4caf50;
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+
+th{
+  padding: 12px 15px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+td,th{
+  padding: 12px 15px;
+  font-size: 14px;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.grey-back{
+  background-color: #FBFBFB;
 }

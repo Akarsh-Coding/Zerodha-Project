@@ -1,8 +1,15 @@
 import React from 'react';
+import Hero from './Hero';
+import Tables from './Tables';
+import ChargesExplanation from './ChargesExplanation';
 
 function PricingPage() {
     return ( 
-        <h1>PricingPage</h1>
+        <div>
+            <Hero/>
+            <Tables/>
+            <ChargesExplanation/>
+        </div>
     );
 }
 
