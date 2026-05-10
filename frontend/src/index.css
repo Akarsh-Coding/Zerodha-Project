@@ -138,9 +138,10 @@ a {
 .tab {
   padding: 6px 15px;
   margin-right: 3px;
+  font-weight: 500;
 }
 
-.sel {
+.nav-tabs .tab:hover {
   color: #666;
 }
 
@@ -178,4 +179,20 @@ strong {
 
 .grey-back{
   background-color: #FBFBFB;
+}
+
+.hover-enlarges{
+  transition: transform 0.4s ease;
+}
+
+.hover-enlarges:hover{
+  transform: scale(1.05);
+}
+
+.Sub-list{
+  border-top: 0 !important;
+}
+
+.Sub-list li:hover{
+  color: #424242;
 }
