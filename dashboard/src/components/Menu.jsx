@@ -1,33 +1,57 @@
-import React from "react";
+import React, {useState} from "react";
+
+import {Link} from "react-router-dom";
 
 function Menu() {
+  const [selectedMenu, setSelectedMenu] = useState(0);
+  const [isProfileDropdownOpen , setIsProfileDropdownOpen] = useState(false);
+  
+  const handleMenuClick = (index) => {
+    setSelectedMenu(index);
+  };
+  const handleProfileClick = (index) => {
+    setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  };
+
   return (
     <div className="menu-container">
-      <img src="logo.png" style={{ width: "50px" }} />
+      <img src="logo.png" style={{ width: "25px" }} />
       <div className="menus">
         <ul>
           <li>
-            <p>Dashboard</p>
+            <Link style={{textDecoration:"none"}} to="/" onClick={() => handleMenuClick(0)}>
+            <p className={ selectedMenu===0 ?  " menu selected" : "menu"}>Dashboard</p>
+            </Link>
           </li>
           <li>
-            <p>Orders</p>
+            <Link style={{textDecoration:"none"}} to="/orders" onClick={() => handleMenuClick(1)}>
+            <p className={ selectedMenu===1 ?  " menu selected" : "menu"}>Orders</p>
+            </Link>
           </li>
           <li>
-            <p>Holdings</p>
+            <Link style={{textDecoration:"none"}} to="/holdings" onClick={() => handleMenuClick(2)}>
+            <p className={ selectedMenu===2 ?  " menu selected" : "menu"}>Holdings</p>
+            </Link>
           </li>
           <li>
-            <p>Positions</p>
+            <Link style={{textDecoration:"none"}} to="/positions" onClick={() => handleMenuClick(3)}>
+            <p className={ selectedMenu===3 ?  " menu selected" : "menu"}>Positions</p>
+            </Link>
           </li>
           <li>
-            <p>Funds</p>
+            <Link style={{textDecoration:"none"}} to="/funds" onClick={() => handleMenuClick(4)}>
+            <p className={ selectedMenu===4 ?  " menu selected" : "menu"}>Funds</p>
+            </Link>
           </li>
           <li>
-            <p>Apps</p>
+            <Link style={{textDecoration:"none"}} to="/apps" onClick={() => handleMenuClick(5)}>
+            <p className={ selectedMenu===5 ?  " menu selected" : "menu"}>Apps</p>
+            </Link>
           </li>
         </ul>
         <hr />
         <div className="profile" 
-        // onClick={handleProfileClick}
+        onClick={handleProfileClick}
         >
           <div className="avatar">ZU</div>
           <p className="username">USERID</p>
