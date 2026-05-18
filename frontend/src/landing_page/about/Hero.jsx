@@ -14,8 +14,8 @@ function Hero() {
                 </div>
                 <div className="col-6 mt-4 p-4 pe-5">
                     <p>In addition, we run a number of popular open online educational and community initiatives to empower retail traders and investors.</p>
-                    <p>Rainmatter, our fintech fund and incubator, has invested in several fintech startups with the goal of growing the Indian capital markets.</p>
-                    <p>And yet, we are always up to something new every day. Catch up on the latest updates on our blog or see what the media is saying about us or learn more about our business and product philosophies.</p>
+                    <p><a href="https://rainmatter.com/" style={{fontWeight:"500"}}>Rainmatter</a>, our fintech fund and incubator, has invested in several fintech startups with the goal of growing the Indian capital markets.</p>
+                    <p>And yet, we are always up to something new every day. Catch up on the latest updates on our <a href="https://zerodha.com/z-connect" style={{fontWeight:"500"}}>blog</a> or see what the media is <a href="https://zerodha.com/media" style={{fontWeight:"500"}}>saying about us</a> or learn more about our business and product <a href="https://zerodha.com/about/philosophy/" style={{fontWeight:"500"}}>philosophies.</a></p>
                 </div>
             </div>
         </div>

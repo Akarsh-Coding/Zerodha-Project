@@ -12,7 +12,7 @@ function HomePage() {
     return ( 
     <>
         <Hero/>
-        <Awards/>
+        {/* <Awards/> */}
         <Stats/>
         <Pricing/>
         <Education/>

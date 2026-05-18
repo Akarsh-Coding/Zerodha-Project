@@ -1,6 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function Team() {
+    const [open, setOpen] = useState([false, false, false, false, false, false]);
+
+    const toggleList = (index) => {
+    setOpen(prev => prev.map((item, i) => i === index ? !item : item));
+};
+
     return ( 
         <div className="container border-top text-muted">
             <div className="row p-5 pb-0 mt-5">
@@ -16,7 +22,7 @@ function Team() {
                     <p>Nithin bootstrapped and founded Zerodha in 2010 to overcome the hurdles he faced during his decade long stint as a trader. Today, Zerodha has changed the landscape of the Indian broking industry.</p>
                     <p>He is a member of the SEBI Secondary Market Advisory Committee (SMAC) and the Market Data Advisory Committee (MDAC).</p>
                     <p>Playing basketball is his zen.</p>
-                    <p>Connect on <a href="#">Homepage</a> / <a href="#">TradingQnA</a> / <a href="#">Twitter</a></p>
+                    <p>Connect on <a href="https://nithinkamath.me/" style={{fontWeight:"500"}}>Homepage</a> / <a href="https://tradingqna.com/u/nithin/summary" style={{fontWeight:"500"}}>TradingQnA</a> / <a href="https://twitter.com/Nithin0dha" style={{fontWeight:"500"}}>Twitter</a></p>
                 </div>
             </div>
             <div className="row mt-5">
@@ -24,60 +30,66 @@ function Team() {
                     <img src="/images/NikhilKamath.jpg" alt="" style={{borderRadius:"100%", width:"55%"}}/>
                     <p className='fs-5 mt-3 mb-1 text-muted'>Nikhil Kamath</p>
                     <p style={{color:"#666", margin:"0"}} >Co-founder & CFO</p>
-                    <div className='mb-5 dropdown'>
-                        <button className="btn dropdown-toggle text-muted border-0 shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bio</button>
-                        <div className="dropdown-menu p-3">
-                            <p>Nikhil is an astute and experienced investor, and he heads financial planning at Zerodha. An avid reader, he always appreciates a good game of chess.</p>
-                        </div>
+                    <div className='mb-5'>
+                        <p className='text-muted mt-2' style={{ cursor: "pointer" }} onClick={() => toggleList(0)}
+                            >Bio <i className={`fa-solid ${open[0] ? "fa-angle-up" : "fa-angle-down"}`}></i></p>
+                            <div className={`bio-content ${open[0] ? "show" : ""}`}>
+                                <p className='p-5 pt-3'>Nikhil is an astute and experienced investor, and he heads financial planning at Zerodha. An avid reader, he always appreciates a good game of chess.</p>
+                            </div>
                     </div>
                     <img className='mt-5' src="/images/SeemaPatil.jpg" alt="" style={{borderRadius:"100%", width:"55%"}}/>
                     <p className='fs-5 mt-3 mb-1 text-muted'>Seema Patil</p>
                     <p style={{color:"#666", margin:"0"}} >Director</p>
-                    <div className='mb-5 dropdown'>
-                        <button className="btn dropdown-toggle text-muted border-0 shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bio</button>
-                        <div className="dropdown-menu p-3">
-                        <p>Seema who has lead the quality team since the beginning of Zerodha, is now a director. She is an extremely disciplined fitness enthusiast.</p>
-                        </div>
+                    <div className='mb-5'>
+                        <p className='text-muted mt-2' style={{ cursor: "pointer" }} onClick={() => toggleList(1)}
+                            >Bio <i className={`fa-solid ${open[1] ? "fa-angle-up" : "fa-angle-down"}`}></i></p>
+                            <div className={`bio-content ${open[1] ? "show" : ""}`}>
+                                <p className='p-5 pt-3'>Seema who has lead the quality team since the beginning of Zerodha, is now a director. She is an extremely disciplined fitness enthusiast.</p>
+                            </div>
                     </div>
                 </div>
                 <div className="col text-center  mb-5">
                     <img src="/images/KailashNadh.jpg" alt="" style={{borderRadius:"100%", width:"55%"}}/>
                     <p className='fs-5 mt-3 mb-1 text-muted'>Dr. Kailash Nadh</p>
                     <p style={{color:"#666", margin:"0"}} >CTO</p>
-                    <div className='mb-5 dropdown'>
-                        <button className="btn dropdown-toggle text-muted border-0 shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bio</button>
-                        <div className="dropdown-menu p-3">
-                        <p>Kailash has a PhD in Artificial Intelligence & Computational Linguistics, and is the brain behind all our technology and products. He has been a developer from his adolescence and continues to write code every day.</p>
-                        </div>
+                    <div className='mb-5'>
+                        <p className='text-muted mt-2' style={{ cursor: "pointer" }} onClick={() => toggleList(2)}
+                            >Bio <i className={`fa-solid ${open[2] ? "fa-angle-up" : "fa-angle-down"}`}></i></p>
+                            <div className={`bio-content ${open[2] ? "show" : ""}`}>
+                                <p className='p-5 pt-3'>Kailash has a PhD in Artificial Intelligence & Computational Linguistics, and is the brain behind all our technology and products. He has been a developer from his adolescence and continues to write code every day.</p>
+                            </div>
                     </div>
                     <img className='mt-5' src="/images/KarthikRangappa.jpg" alt="" style={{borderRadius:"100%", width:"55%"}}/>
                     <p className='fs-5 mt-3 mb-1 text-muted'>Karthik Rangappa</p>
                     <p style={{color:"#666", margin:"0"}} >Chief of Education</p>
-                    <div className='mb-5 dropdown'>
-                        <button className="btn dropdown-toggle text-muted border-0 shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bio</button>
-                        <div className="dropdown-menu p-3">
-                        <p>Karthik "Guru" Rangappa single handledly wrote Varsity, Zerodha's massive educational program. He heads investor education initiatives at Zerodha and loves stock markets, classic rock, single malts, and photography.</p>
-                        </div>
+                    <div className='mb-5'>
+                        <p className='text-muted mt-2' style={{ cursor: "pointer" }} onClick={() => toggleList(3)}
+                            >Bio <i className={`fa-solid ${open[3] ? "fa-angle-up" : "fa-angle-down"}`}></i></p>
+                            <div className={`bio-content ${open[3] ? "show" : ""}`}>
+                                <p className='p-5 pt-3'>Karthik "Guru" Rangappa single handledly wrote Varsity, Zerodha's massive educational program. He heads investor education initiatives at Zerodha and loves stock markets, classic rock, single malts, and photography.</p>
+                            </div>
                     </div>
                 </div>
                 <div className="col text-center  mb-5">
                     <img src="/images/VenuMadhav.jpg" alt="" style={{borderRadius:"100%", width:"55%"}}/>
                     <p className='fs-5 mt-3 mb-1 text-muted'>Venu Madhav</p>
                     <p style={{color:"#666", margin:"0"}} >COO</p>
-                    <div className='mb-5 dropdown'>
-                        <button className="btn dropdown-toggle text-muted border-0 shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bio</button>
-                        <div className="dropdown-menu p-3">
-                        <p>Venu is the backbone of Zerodha taking care of operations and ensuring that we are compliant to rules and regulations. He has over a dozen certifications in financial markets and is also proficient in technical analysis. Workouts, cycling, and adventuring is what he does outside of Zerodha.</p>
-                        </div>
+                    <div className='mb-5'>
+                        <p className='text-muted mt-2' style={{ cursor: "pointer" }} onClick={() => toggleList(4)}
+                            >Bio <i className={`fa-solid ${open[4] ? "fa-angle-up" : "fa-angle-down"}`}></i></p>
+                            <div className={`bio-content ${open[4] ? "show" : ""}`}>
+                                <p className='p-5 pt-3'>Venu is the backbone of Zerodha taking care of operations and ensuring that we are compliant to rules and regulations. He has over a dozen certifications in financial markets and is also proficient in technical analysis. Workouts, cycling, and adventuring is what he does outside of Zerodha.</p>
+                            </div>
                     </div>
                     <img className='mt-5' src="/images/AustinPrakesh.jpg" alt="" style={{borderRadius:"100%", width:"55%"}}/>
                     <p className='fs-5 mt-3 mb-1 text-muted'>Austin Prakesh</p>
                     <p style={{color:"#666", margin:"0"}} >Director Strategy</p>
-                    <div className='mb-5 dropdown'>
-                        <button className="btn dropdown-toggle text-muted border-0 shadow-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">Bio</button>
-                        <div className="dropdown-menu p-3">
-                        <p>Austin is a successful self-made entrepreneur from Singapore. His area of specialty revolves around helping organisations including grow by optimizing revenue streams and creating growth strategies. He is a boxing enthusiast and loves collecting exquisite watches.</p>
-                        </div>
+                    <div className='mb-5'>
+                        <p className='text-muted mt-2' style={{ cursor: "pointer" }} onClick={() => toggleList(5)}
+                            >Bio <i className={`fa-solid ${open[5] ? "fa-angle-up" : "fa-angle-down"}`}></i></p>
+                            <div className={`bio-content ${open[5] ? "show" : ""}`}>
+                                <p className='p-5 pt-3'>Austin is a successful self-made entrepreneur from Singapore. His area of specialty revolves around helping organisations including grow by optimizing revenue streams and creating growth strategies. He is a boxing enthusiast and loves collecting exquisite watches.</p>
+                            </div>
                     </div>
                 </div>
             </div>

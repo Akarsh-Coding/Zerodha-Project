@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Tables() {
     const [activeTable, setActiveTable] = useState("equity");
     return (
-        <div className="container pt-3 mt-5" style={{ color: "#424242" }}>
+        <div className="container" style={{ color: "#424242" }}>
             <div>
                 <nav className="nav nav-tabs border-bottom mb-4">
                     <a href="#" className={`tab ${activeTable === "equity" ? "active" : ""}`}

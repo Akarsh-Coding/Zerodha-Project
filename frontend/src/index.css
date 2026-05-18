@@ -116,8 +116,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-size: 36.75px;
+.container{
+  padding: 0 20px 120px;
+}
+
+.btn-primary{
+  background-color: #387ed1 !important;
+  border: 0;
+  border-radius: 4px !important;
+}
+
+.btn-primary:hover{
+  background-color: #000 !important;
 }
 
 a {
@@ -129,6 +139,18 @@ a {
   color: inherit !important;
 }
 
+.parent i:hover{
+  color: #387ed1;
+  cursor: pointer;
+}
+
+.parent a:hover{
+  color: #387ed1 !important;
+}
+
+.nav-link:hover{
+  color: #387ed1 !important;
+}
 
 .nav-tabs{
   margin-bottom: 30px;
@@ -195,4 +217,61 @@ strong {
 
 .Sub-list li:hover{
   color: #424242;
+}
+
+.bio-content{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease;
+
+}
+
+.bio-content.show{
+  max-height: 300px;
+  opacity: 1;
+}
+
+.img-hover:hover{
+  opacity: 0.7;
+}
+
+input:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+
+.account-card{
+    position: relative;
+    border-radius: 8px;
+}
+
+.account-card:hover{
+  border-color: #387ed1 !important;
+}
+
+.account-icon{
+    position: absolute;
+
+    top: 20px;
+    left: -20px;
+
+    width: 40px;
+    height: 40px;
+
+    background: #f1f5fe;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-icon img{
+    width: 28px;
 }

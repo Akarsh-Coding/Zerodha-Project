@@ -72,7 +72,7 @@ function ProductPage() {
                 G_Play="https://play.google.com/store/apps/details?id=com.zerodha.varsity"
                 A_Store="https://apps.apple.com/in/app/varsity-by-zerodha/id1474610753"
             />
-            <p className="fs-5 text-center mt-5 p-5">Want to know more about our technology stack? Check out the <a href="https://zerodha.tech/">Zerodha.tech</a> blog.</p>
+            <p className="fs-5 text-center mt-5 p-5">Want to know more about our technology stack? Check out the <a style={{fontWeight:"500"}} href="https://zerodha.tech/">Zerodha.tech</a> blog.</p>
             <Universe />
         </div>
     );
