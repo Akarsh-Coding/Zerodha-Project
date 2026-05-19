@@ -79,6 +79,13 @@ must all be started separately.
 
 ---
 
+# ⚠️ Responsive Design Note
+
+This project is currently not fully responsive for different screen sizes and devices.  
+The main focus of this project was frontend structure, backend integration, and dashboard development.
+
+---
+
 # 📁 Project Structure
 
 ```bash
